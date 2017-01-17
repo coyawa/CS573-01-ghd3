@@ -1,10 +1,112 @@
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"> 
+    	<title>A1:Tangram By Congyang</title>
+    <style>
+	       /* button {
+	            position: absolute;
+	            margin-left: 50px;
+	            margin-top: 250px;
+	        }*/
+	        /* 增加按钮的样式 */
+	</style>
+	</head>
+		<body>
+			<p>七巧板 Tangram Puzzle<p/>
+			<!-- <button id="man">Make a Man</button> -->
+			<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+			<script>
+			    console.log(d3); 
+			    // test if d3 is loaded
+				
+				var width = 1000;
+				var height = 1000;
+			    var svg = d3.select("body").append("svg")
+									       .attr("width", width)
+									       .attr("height", height); 
+			    // Add an SVG
+ 
+			    var rect = svg.append("rect")
+						      .attr("x", 400)
+						      .attr("y", 90)
+						      .attr("width", 60)
+						      .attr("height", 60)
+						      .attr("transform", "rotate(45, 431, 126)")
+						      .attr("fill", "#FCE23B"); 
 
-<script>
-  console.log(d3); // test if d3 is loaded
-  // Add an SVG
-  // Add Rectangles
-  // Add Circles
-  // Add Lines
-  // Add Polygons
-</script>
+		        // Add Rectangles and rotate it to 45°
+		        // Tangram Size based on the wiki picture measured by Sektch
+
+				var circles = [ { cx: 90, cy:116, r:15 },
+								{ cx: 190, cy:116, r:15 },];
+			    // Add Circles * 2
+
+			    var line = svg.append("line")
+					          .attr("x1", 75)
+					          .attr("y1", 155)
+					          .attr("x2", 205)
+					          .attr("y2", 155)
+					          .attr("stroke", "#D7B6A5")
+					          .attr("stroke-width", 4); 
+			    // Add Lines
+				
+			    var polygon1 = svg.append("polygon")
+			        			  .attr("points", "387.956138,121.75 301.502328,211 301.502328,32.5")
+			        			  .attr("fill", "#FB8E4A")
+			        
+			    var polygon2 = svg.append("polygon")
+			        			  .attr("points", "390.301887,121.363349 478.603774,31 302,31")
+			        			  .attr("fill", "#0A6720")
+				var polygon3 = svg.append("polygon")
+			        			  .attr("points", "389.955917,122.66372 350.955917,163.91372 428.955917,163.91372")
+			        			  .attr("fill", "#190C3C")
+				var polygon4 = svg.append("polygon")
+			        			  .attr("points", "348.704873,166.061531 430.521797,165.204419 387.998625,209.724724 303,211")
+			        			  .attr("fill", "#877486")
+			    var polygon5 = svg.append("polygon")
+			        			  .attr("points", "438,76 478,118 478,34")
+			        			  .attr("fill", "#7C1206")
+				var polygon6 = svg.append("polygon")
+			        			  .attr("points", "478,122 478,210 390,210")
+			        			  .attr("fill", "#D41B05")
+				var canvas = svg.append("polygon")
+			        			  .attr("points", "550,0 800,0, 800,250 550,250")
+			        			  .attr("fill", "none")
+			        			  .attr("stroke", "#BFC0C2")
+			        			  .attr("stroke-width", 3)
+			     // Add Polygons * 7
+			    
+				var drag = d3.behavior.drag()
+						.on("drag", dragmove); 
+		
+				 svg.selectAll("circle")
+					.data(circles)
+					.enter()
+					.append("circle")
+					.attr("cx",function(d){ return d.cx; })
+					.attr("cy",function(d){ return d.cy; })
+					.attr("r",function(d){ return d.r; })
+					.attr("fill","#FBBD04")
+					.call(drag);
+
+				 svg.selectAll("ploygon")
+				 	.data(polygon1)
+				 	.enter()
+				    .call(drag);
+
+				 svg.select("line")
+				 	.data(line)
+				 	.enter()
+				 	.call(drag)
+						
+		function dragmove(d) {	
+			d3.select(this)
+			  .attr("cx", d.cx = d3.event.x )
+			  .attr("cy", d.cy = d3.event.y );
+		}
+			    // Drag function implement.(不能出canvas， bounding area )
+			        
+			</script>
+		</body>
+</html>
