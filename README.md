@@ -8,7 +8,7 @@ By Congyang Wang  --2017/01/17
 	- Assignment 1: http://coyawa.github.io/01-ghd3
 - Idea
 	- My design idea came from a famous puzzle game <span id="inline-blue">Tangram</span>;  Chinese <span id="inline-green">七巧板</span>; literally: "seven boards of skill". 
-	- You can use these boards to make many stuff you like, especially for children, they have a fantastic imagination.
+	- Everyone can use these boards to make many stuff you like, especially for children, they have a fantastic imagination.
 - Why
 	- Our topic is shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc
 - Tool
