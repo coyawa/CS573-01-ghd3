@@ -1,6 +1,6 @@
 Assignment 1 - Hello World: GitHub and d3  
 ===
-By Congyang Wang 
+By Congyang Wang  --2017/01/17
 
 ####  Description
 - Assignment 1
