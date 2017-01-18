@@ -24,9 +24,6 @@ By Congyang Wang  --2017/01/17
 	- Screenshot
 	![Screenshots][image-3]
 
-Why: Our topic is shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc
-
-Check more information about tangram from [Wikipedia][1]
 #### Link
 Assignment 1: http://coyawa.github.io/01-ghd3
 > It may jump to my personal domain: http://wangcongyang.com/01-ghd3/
