@@ -4,7 +4,7 @@ By Congyang Wang
 
 ####  Description
 - Assignment 1
-This is the my first work of WPI CS573 Data Visualization, in A1, I used D3.js and JavaScript to draw shapes, made interactive motion like drag, then submitted the work through github and deployed this to github page. 
+    - This is the my first work of WPI CS573 Data Visualization, in A1, I used D3.js and JavaScript to draw shapes, made interactive motion like drag, then submitted the work through github and deployed this to github page. 
 
 - Link
     - Assignment 1: http://coyawa.github.io/01-ghd3
