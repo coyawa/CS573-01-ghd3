@@ -4,29 +4,24 @@
 	<meta charset="utf-8"> 
     	<title>A1:Tangram By Congyang</title>
     <style>
-	       /* button {
-	            position: absolute;
-	            margin-left: 50px;
-	            margin-top: 250px;
-	        }*/
-	        /* 增加按钮的样式 */
+
 	</style>
 	</head>
 		<body>
-			<p>七巧板 Tangram Puzzle<p/>
-			<!-- <button id="man">Make a Man</button> -->
+			<p><b>Smile and Tangram Puzzle</b><p/>
+			<p>By Congyang<p/>
 			<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 			<script>
 			    console.log(d3); 
 			    // test if d3 is loaded
 				
-				var width = 1000;
-				var height = 1000;
+				var width = 820;
+				var height = 300;
 			    var svg = d3.select("body").append("svg")
 									       .attr("width", width)
 									       .attr("height", height); 
 			    // Add an SVG
- 
+
 			    var rect = svg.append("rect")
 						      .attr("x", 400)
 						      .attr("y", 90)
@@ -34,9 +29,17 @@
 						      .attr("height", 60)
 						      .attr("transform", "rotate(45, 431, 126)")
 						      .attr("fill", "#FCE23B"); 
-
-		        // Add Rectangles and rotate it to 45°
+			    // Add Rectangles and rotate it to 45°
 		        // Tangram Size based on the wiki picture measured by Sektch
+
+				var borderPath = svg.append("rect")
+       			.attr("x", 0)
+       			.attr("y", 0)
+       			.attr("width", width)
+				.attr("height", height) 
+       			.attr("fill", "none")
+			    .attr("stroke", "#BFC0C2")
+			    .attr("stroke-width", 3)
 
 				var circles = [ { cx: 90, cy:116, r:15 },
 								{ cx: 190, cy:116, r:15 },];
@@ -48,8 +51,8 @@
 					          .attr("x2", 205)
 					          .attr("y2", 155)
 					          .attr("stroke", "#D7B6A5")
-					          .attr("stroke-width", 4); 
-			    // Add Lines
+					          .attr("stroke-width", 4);
+			    // Add Line
 				
 			    var polygon1 = svg.append("polygon")
 			        			  .attr("points", "387.956138,121.75 301.502328,211 301.502328,32.5")
@@ -71,42 +74,68 @@
 			        			  .attr("points", "478,122 478,210 390,210")
 			        			  .attr("fill", "#D41B05")
 				var canvas = svg.append("polygon")
-			        			  .attr("points", "550,0 800,0, 800,250 550,250")
+			        			  .attr("points", "550,10 800,10, 800,260 780,240 570, 240 550,260")
 			        			  .attr("fill", "none")
 			        			  .attr("stroke", "#BFC0C2")
 			        			  .attr("stroke-width", 3)
-			     // Add Polygons * 7
-			    
-				var drag = d3.behavior.drag()
-						.on("drag", dragmove); 
-		
-				 svg.selectAll("circle")
-					.data(circles)
-					.enter()
-					.append("circle")
-					.attr("cx",function(d){ return d.cx; })
-					.attr("cy",function(d){ return d.cy; })
-					.attr("r",function(d){ return d.r; })
-					.attr("fill","#FBBD04")
-					.call(drag);
+			     // Add Polygons * 6 and canvas for drag painting.
+			   
+			    var drag = d3.behavior.drag()
+						     .on("drag", dragmove);  
+				
+				function dragmove(d) {	
+				     circle = d3.select(this);
+				        d.cx = Math.max(15, Math.min(width-15, d3.event.x))
+				        d.cy = Math.max(15, Math.min(height-15, d3.event.y))
+				     circle.attr("cx", d.cx)
+				           .attr("cy", d.cy);
+				     // rect = d3/select(this);
+				     // rect.attr("x", d.x = d3.event.x)
+					    //  .attr("y", d.y = d3.event.y)
+					     // .attr("y1", d.y)
+					     // .attr("y2", d.y);				
+				 }
 
-				 svg.selectAll("ploygon")
-				 	.data(polygon1)
-				 	.enter()
-				    .call(drag);
+					 svg.selectAll("circle")
+						.data(circles)
+						.enter()
+						.append("circle")
+						.attr("cx",function(d){ return d.cx; })
+						.attr("cy",function(d){ return d.cy; })
+						.attr("r",function(d){ return d.r; })
+						.attr("fill","#FBBD04")
+						.call(drag);
+				 // Drag function implement with circles，it works well.
 
-				 svg.select("line")
-				 	.data(line)
-				 	.enter()
-				 	.call(drag)
-						
-		function dragmove(d) {	
-			d3.select(this)
-			  .attr("cx", d.cx = d3.event.x )
-			  .attr("cy", d.cy = d3.event.y );
-		}
-			    // Drag function implement.(不能出canvas， bounding area )
+			     // var rect =[{x:400, y:90, width:60, height:60}]
+				 // svg.selectAll("rect")
+				 // .data(rect)
+				 // .enter()
+				 // .append("rect")
+				 // .attr("x", function(d) {return d.x;} )
+				 // .attr("y", function(d) {return d.y;} )
+				 // .attr("width", 60)
+				 // .attr("height", 60)
+				 // .attr("transform", "rotate(45, 431, 126)")
+				 // .attr("fill", "#FCE23B")
+				 // .call(drag);
+
+				 // svg.selectAll("rect")
+				 // 	.data(rect)
+				 // 	.enter()
+				 // 	.attr("x", function(d){return d.x;} )
+				 // 	.attr("y", function(d){return d.y;} )
+				 // 	//.attr("y1", function(d){return d.y;} )
+				 // 	//.attr("y2", function(d){return d.y;} )
+				 // 	.call(drag);
+
+			    //*****These part lists all my attempts to make the retangle and other shapes can be draggable too. they are still not working by now*****
+			    //Progress: circles can be draggable and stay in the borders.
 			        
 			</script>
+			<p><span style="color:#0A6720;font-size:14px">Try to drag the yellow circles to the Polygon Canvas :)</span><p/>
+			<p><b>Idea:</b> My design idea came from a famous puzzle game /Tangram/ Chinese 七巧板; literally: "seven boards of skill".<p/> 
+			<p><b>Why:</b> Our topic is shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc<p/>
+			<p>Check more from Wikipedia: <a href="https://en.wikipedia.org/wiki/Tangram?oldformat=true">https://en.wikipedia.org/wiki/Tangram?oldformat=true</a> <p/>
 		</body>
 </html>
