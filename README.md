@@ -8,9 +8,9 @@ By Congyang Wang  --2017/01/17
 	- Assignment 1: http://coyawa.github.io/01-ghd3
 - Idea
 	- My design idea came from a famous puzzle game <span id="inline-blue">Tangram</span>;  Chinese <span id="inline-green">七巧板</span>; literally: "seven boards of skill". 
-	- Everyone can use these boards to make many stuff you like, especially for children, they have a fantastic imagination.
+	- Everyone can use these boards to make many stuff they like, especially for children with fantastic imagination.
 - Why
-	- Our topic is shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc
+	- Our topic is about shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc
 - Tool
 	- Code: Sublime Text 3
 	- Prototype: 53 Paper with Apple Pencil
@@ -62,6 +62,6 @@ https://www.dashingd3js.com/svg-basic-shapes-and-d3js
 [1]:	https://en.wikipedia.org/wiki/Tangram?oldformat=true
 
 [image-1]:	https://ww4.sinaimg.cn/large/006tNbRwgy1fbuih74frrj31kw16odmf.jpg
-[image-2]:	https://ww1.sinaimg.cn/large/006tNbRwgy1fbuih488quj31kw16o45y.jpg
+[image-2]:	https://ww3.sinaimg.cn/large/006tNbRwgw1fbukvzk6x9j31kw16on3f.jpg
 [image-3]:	https://ww2.sinaimg.cn/large/006tNbRwgw1fbuih1jpfij31ki18sgtp.jpg
 
