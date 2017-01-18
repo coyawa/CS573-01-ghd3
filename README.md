@@ -51,8 +51,7 @@ Assignment 1: http://coyawa.github.io/01-ghd3
 #### References
 >Inspiring:
 https://www.wikiwand.com/en/Tangram
-http://wow.techbrood.com/fiddle/30533
-
+http://wow.techbrood.com/fiddle/30533    
 >Coding:
 >http://d3.decembercafe.org/
 >https://www.dashingd3js.com/svg-basic-shapes-and-d3js
