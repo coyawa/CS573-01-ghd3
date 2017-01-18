@@ -4,18 +4,17 @@ By Congyang Wang  --2017/01/17
 #### Description
 - Assignment 1
 	- This is my first work of WPI CS573 Data Visualization, in A1, I used D3.js and JavaScript to draw shapes, made interactive motion like drag, then submitted the work through github and deployed this to github page.
-
 - Link
 	- Assignment 1: http://coyawa.github.io/01-ghd3
 - Idea
 	- My design idea came from a famous puzzle game <span id="inline-blue">Tangram</span>;  Chinese <span id="inline-green">七巧板</span>; literally: "seven boards of skill". 
-	- You can use these boards to make many many stuff you like, especially for children, they have a fantastic imagination.
+	- You can use these boards to make many stuff you like, especially for children, they have a fantastic imagination.
 - Why
 	- Our topic is shapes, the tangram is the game you can use boards to form many specific shapes like man, bird,.etc
 - Tool
 	- Code: Sublime Text 3
 	- Prototype: 53 Paper with Apple Pencil
-	- Write: Mweb
+	- Write: MWeb
 	- Color Pick: Sip
 
 - Screenshots
