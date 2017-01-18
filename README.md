@@ -49,11 +49,11 @@ Assignment 1: http://coyawa.github.io/01-ghd3
 - Next move: fix the draggable issue, add "control + mouse" rotate function.
 
 #### References
->Inspiring:
-https://www.wikiwand.com/en/Tangram
+>Inspiring:  
+https://www.wikiwand.com/en/Tangram  
 http://wow.techbrood.com/fiddle/30533    
->Coding:
->http://d3.decembercafe.org/
+>Coding:  
+>http://d3.decembercafe.org/  
 >https://www.dashingd3js.com/svg-basic-shapes-and-d3js
 
 
