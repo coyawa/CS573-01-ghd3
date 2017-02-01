@@ -42,6 +42,7 @@ Assignment 1: http://coyawa.github.io/01-ghd3
 - This is a good start to me to learn D3.js and JavaScript, I will keep update this work, make it more perfect with the whole function.
 - Learn from other classmates beautiful works.
 - Next move: fix the draggable issue, add "control + mouse" rotate function.
+- Special thanks to @jacobh, @chrisc and @laneh's great help.
 
 #### References
 > Inspiring:  
